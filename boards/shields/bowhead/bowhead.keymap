@@ -116,17 +116,16 @@ keymap {
 // nav
 // -------------------------------------------------------------     --------------------------------------------------------------
 //           |   BT 1  |   BT 2  |   BT 3  |   BT 4  |   BT 5  |     |  HOME   |  PGDN   |   PGUP  |  END    |   DEL   |
-// |  SHIFT  |         |   cut   |  copy   |  paste  |   GUI   |     |  LEFT   |  DOWN   |    UP   |  RIGHT  |   TAB   |   BSPC   |
+// |  SHIFT  |         |   cut   |  copy   |  paste  |   GUI   |     |  LEFT   |  DOWN   |    UP   |  RIGHT  |   BSPC  |   TAB   |
 //           | BT CLR  |         |  tcopy  | tpaste  |         |     |         |         |    .    |    ,    |    /    |
 //                                         |  NUM    |   SYM   |     |         |  DEF    |
             bindings = <
      &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_SEL 5 &kp HOME  &kp PG_DN &kp PG_UP &kp END    &kp DEL
-   &mt LSHIFT DEF &none &cut      &copy     &paste    &kp RGUI        &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &kp TAB   &kp BSPC
+   &mt LSHIFT DEF &none &cut      &copy     &paste    &kp RGUI        &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &kp BSPC  &kp TAB
               &bt BT_CLR &none    &tcopy    &tpaste   &none           &none     &none     &kp DOT   &kp COMMA  &kp FSLH
                                             &sl NUM   &sl SYM         &none     &sl DEF
             >;
 
-            /* sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>; */
         };
     };
 };
