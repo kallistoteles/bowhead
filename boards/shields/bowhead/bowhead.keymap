@@ -76,7 +76,7 @@ keymap {
     bindings = <
               &kp Q     &kp W     &kp F     &kp P     &kp B           &kp J     &kp L     &kp U     &kp Y     &kp GRAVE
 &mt LSHIFT ESC &kp A    &kp R     &kp S     &kp T     &kp G           &kp M     &kp N     &kp E     &kp I     &kp O     &mt RSHIFT RET
-              &kp X     &kp C     &kp D     &kp V     &kp Z           &kp K     &kp H     &kp H  &kp H  &kp H
+              &kp X     &kp C     &kp D     &kp V     &kp Z           &kp K     &kp H     &kp INT1  &kp INT2  &kp INT3
                                         &sl NUM       &sl SYM         &kp SPACE &sl NAV
     >;
   };
@@ -115,14 +115,14 @@ keymap {
 
 // nav
 // -------------------------------------------------------------     --------------------------------------------------------------
-//           |   BT 1  |   BT 2  |   BT 3  |   BT 4  |   BT 5  |     |  HOME   |  PGDN   |   PGUP  |  END    |   DEL   |
-// |  SHIFT  |         |   cut   |  copy   |  paste  |   GUI   |     |  LEFT   |  DOWN   |    UP   |  RIGHT  |   BSPC  |   TAB   |
-//           | BT CLR  |         |  tcopy  | tpaste  |         |     |         |         |    .    |    ,    |    /    |
+//           |   BT 1  |   BT 2  |   BT 3  |   BT 4  |   BT 5  |     |  HOME   |  PGDN   |   PGUP  |  END    |   BSPC  |
+// |  SHIFT  |         |   cut   |  copy   |  paste  |   GUI   |     |  LEFT   |  DOWN   |    UP   |  RIGHT  |   TAB   |  RETURN   |
+//           | BT CLR  |         |  tcopy  | tpaste  |         |     |         |  DEL    |    .    |    ,    |    /    |
 //                                         |  NUM    |   SYM   |     |         |  DEF    |
             bindings = <
-     &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_SEL 5 &kp HOME  &kp PG_DN &kp PG_UP &kp END    &kp DEL
-   &mt LSHIFT DEF &none &cut      &copy     &paste    &kp RGUI        &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &kp BSPC  &kp TAB
-              &bt BT_CLR &none    &tcopy    &tpaste   &none           &none     &none     &kp DOT   &kp COMMA  &kp FSLH
+     &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_SEL 5 &kp HOME  &kp PG_DN &kp PG_UP &kp END    &kp BSPC
+   &mt LSHIFT DEF &none &cut      &copy     &paste    &kp RGUI        &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &kp TAB  &kp RET
+              &bt BT_CLR &none    &tcopy    &tpaste   &none           &none     &kp DEL   &kp DOT   &kp COMMA  &kp FSLH
                                             &sl NUM   &sl SYM         &none     &sl DEF
             >;
 
