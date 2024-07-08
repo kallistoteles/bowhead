@@ -127,13 +127,13 @@ keymap {
 // nav
 // -------------------------------------------------------------     --------------------------------------------------------------
 //           |   BT 1  |   BT 2  |   BT 3  |   BT 4  |   BT 5  |     |  HOME   |  PGDN   |   PGUP  |  END    |   DEL   |
-// |   DEF   |         |         |         |         |         |     |  LEFT   |  DOWN   |    UP   |  RIGHT  |   TAB   |  RETURN   |
-//           | BT CLR  |         |         |         |         |     |         |         |    .    |    ,    |    /    |
+// |   DEF   |         |   MUTE  |  VOLUP  | VOLDOWN |         |     |  LEFT   |  DOWN   |    UP   |  RIGHT  |   TAB   |  RETURN   |
+//           | BT CLR  |         |  BRIUP  | BRIDOWN |         |     |         |         |    .    |    ,    |    /    |
 //                                         |   NUM   |   SYM   |     |  SPACE  |  NAV    |
             bindings = <
      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp HOME  &kp PG_DN &kp PG_UP &kp END    &kp DEL
-   &sl DEF    &none      &none    &none     &none     &none           &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &kp TAB  &kp RET
-              &bt BT_CLR &none    &none     &none     &none           &none     &none     &kp DOT   &kp COMMA  &kp FSLH
+   &sl DEF    &none &kp C_MUTE &kp C_VOL_UP &kp C_VOL_DN &none        &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &kp TAB  &kp RET
+              &bt BT_CLR &none &kp C_BRI_UP &kp C_BRI_DN &none        &none     &none     &kp DOT   &kp COMMA  &kp FSLH
                                             &sl NUM   &sl SYM         &kp SPACE &sl NAV
             >;
 
