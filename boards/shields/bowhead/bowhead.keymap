@@ -10,6 +10,17 @@
 
 / {
 
+behaviors {
+  hr: balanced_homerow_mods {
+    compatible = "zmk,behavior-hold-tap";
+    #binding-cells = <2>;
+    tapping-term-ms = <200>;
+    quick-tap-ms = <0>;
+    flavor = "balanced";
+    bindings = <&kp>, <&kp>;
+  };
+};
+
 macros {
 
 	cut: cut {
@@ -70,12 +81,12 @@ keymap {
 // def
 // -------------------------------------------------------------     --------------------------------------------------------------
 //           |    Q    |    W    |    F    |    P    |    B    |     |    J    |    L    |    U    |    Y    |   BSPC  |
-// |SHIFT/ESC|    A    |    R    |    S    |    T    |    G    |     |    M    |    N    |    E    |    I    |    O    | SHIFT/RETURN |
+// |   ESC   |   G/A   |    R    |    S    |    T    |    G    |     |    M    |    N    |    E    |    I    |    O    | RETURN |
 //           |    X    |    C    |    D    |    V    |    Z    |     |    K    |    H    |    AO   |    AE   |    OE   |
 //                                         |   NUM   |   SYM   |     |  SPACE  |   NAV   |
     bindings = <
               &kp Q     &kp W     &kp F     &kp P     &kp B           &kp J     &kp L     &kp U     &kp Y     &kp BSPC
-&mt LSHIFT ESC &kp A    &kp R     &kp S     &kp T     &kp G           &kp M     &kp N     &kp E     &kp I     &kp O     &mt RSHIFT RET
+  &kp ESC &hr LGUI A &hr LCTRL R &hr LALT S &hr LSHIFT T &kp G        &kp M &hr RSHIFT N &hr RALT E &hr RCTRL I &hr RGUI O &kp RET
               &kp X     &kp C     &kp D     &kp V     &kp Z           &kp K     &kp H     &kp INT1  &kp INT2  &kp INT3
                                         &sl NUM       &sl SYM         &kp SPACE &sl NAV
     >;
