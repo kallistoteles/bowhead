@@ -81,7 +81,7 @@ keymap {
 // def
 // -------------------------------------------------------------     --------------------------------------------------------------
 //           |    Q    |    W    |    F    |    P    |    B    |     |    J    |    L    |    U    |    Y    |   BSPC  |
-// |   ESC   |   G/A   |    R    |    S    |    T    |    G    |     |    M    |    N    |    E    |    I    |    O    | RETURN |
+// |   ESC   |    A    |    R    |    S    |    T    |    G    |     |    M    |    N    |    E    |    I    |    O    | RETURN |
 //           |    X    |    C    |    D    |    V    |    Z    |     |    K    |    H    |    AO   |    AE   |    OE   |
 //                                         |   NUM   |   SYM   |     |  SPACE  |   NAV   |
     bindings = <
@@ -96,29 +96,29 @@ keymap {
 // sym
 // -------------------------------------------------------------     --------------------------------------------------------------
 //           |    ^    |    $    |    #    |    !    |         |     |         |    ?    |    [    |    ]    |    \    |
-// |  SHIFT  |    &    |    @    |    :    |    _    |         |     |         |    '    |    (    |    )    |    |    |    /   |
+// |   DEF   |    &    |    @    |    :    |    _    |         |     |    `    |    '    |    (    |    )    |    |    |  RETURN   |
 //           |    <    |    >    |    ;    |         |         |     |         |    "    |    {    |    }    |    ~    |
-//                                         |   NUM   |  DEF    |     |         |   NAV   |
+//                                         |   NUM   |  SYM    |     |  SPACE  |   NAV   |
             bindings = <
               &kp CARET &kp DLLR  &kp HASH  &kp EXCL  &none           &none     &kp QMARK &kp LBKT  &kp RBKT  &kp BSLH
-   &mt LSHIFT DEF &kp AMPS &kp AT &kp COLON &kp UNDER &none           &none     &kp APOS  &kp LPAR  &kp RPAR  &kp PIPE  &kp FSLH
+   &sl DEF    &kp AMPS  &kp AT    &kp COLON &kp UNDER &none           &kp GRAVE &kp APOS  &kp LPAR  &kp RPAR  &kp PIPE  &kp RET
               &kp LT    &kp GT    &kp SEMI  &none     &none           &none     &kp DQT   &kp LBRC  &kp RBRC  &kp TILDE
-                                            &sl NUM   &sl DEF         &none     &sl NAV
+                                            &sl NUM   &sl SYM         &kp SPACE &sl NAV
             >;
         };
 
         numeric_layer {
 // num
 // -------------------------------------------------------------     --------------------------------------------------------------
-//           |         |         |    /    |    *    |         |     |         |    7    |    8    |    9    |         |
-// |  SHIFT  |         |         |    +    |    -    |   GUI   |     |         |    4    |    5    |    6    |         |  RETURN   |
-//           |  CTRL   |   ALT   |    %    |    =    |         |     |         |    1    |    2    |    3    |         |
-//                                         |   DEF   |   SYM   |     |  SPACE  |    0    |
+//           |  cut    |         |    /    |    *    |         |     |         |    7    |    8    |    9    |         |
+// |   DEF   |  copy   |  paste  |    +    |    -    |         |     |         |    4    |    5    |    6    |         |  RETURN   |
+//           |  tcopy  |  tpaste |    %    |    =    |         |     |         |    1    |    2    |    3    |         |
+//                                         |   NUM   |   SYM   |     |  SPACE  |    0    |
             bindings = <
-              &kp N1    &none     &kp FSLH  &kp STAR  &none           &none     &kp N7    &kp N8    &kp N9    &none
-   &mt LSHIFT DEF &none &none     &kp PLUS  &kp MINUS &kp RGUI        &none     &kp N4    &kp N5    &kp N6    &none     &kp RET
-              &kp LCTRL &kp LALT  &kp PRCNT &kp EQUAL &none           &none     &kp N1    &kp N2    &kp N3    &none
-                                            &sl NAV   &sl SYM         &kp SPACE &kp N0
+              &cut      &none     &kp FSLH  &kp STAR  &none           &none     &kp N7    &kp N8    &kp N9    &none
+   &sl DEF    &copy     &paste    &kp PLUS  &kp MINUS &none           &none     &kp N4    &kp N5    &kp N6    &none     &kp RET
+              &tcopy    &tpaste   &kp PRCNT &kp EQUAL &none           &none     &kp N1    &kp N2    &kp N3    &none
+                                            &sl NUM   &sl SYM         &kp SPACE &kp N0
             >;
         };
 
@@ -126,15 +126,15 @@ keymap {
 
 // nav
 // -------------------------------------------------------------     --------------------------------------------------------------
-//           |   BT 1  |   BT 2  |   BT 3  |   BT 4  |   BT 5  |     |  HOME   |  PGDN   |   PGUP  |  END    |    `    |
-// |  SHIFT  |         |   cut   |  copy   |  paste  |   GUI   |     |  LEFT   |  DOWN   |    UP   |  RIGHT  |   TAB   |  RETURN   |
-//           | BT CLR  |         |  tcopy  | tpaste  |         |     |         |  DEL    |    .    |    ,    |    /    |
-//                                         |  NUM    |   SYM   |     |         |  DEF    |
+//           |   BT 1  |   BT 2  |   BT 3  |   BT 4  |   BT 5  |     |  HOME   |  PGDN   |   PGUP  |  END    |   DEL   |
+// |   DEF   |         |         |         |         |         |     |  LEFT   |  DOWN   |    UP   |  RIGHT  |   TAB   |  RETURN   |
+//           | BT CLR  |         |         |         |         |     |         |         |    .    |    ,    |    /    |
+//                                         |   NUM   |   SYM   |     |  SPACE  |  NAV    |
             bindings = <
-     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp HOME  &kp PG_DN &kp PG_UP &kp END    &kp GRAVE
-   &mt LSHIFT DEF &none &cut      &copy     &paste    &kp RGUI        &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &kp TAB  &kp RET
-              &bt BT_CLR &none    &tcopy    &tpaste   &none           &none     &kp DEL   &kp DOT   &kp COMMA  &kp FSLH
-                                            &sl NUM   &sl SYM         &none     &sl DEF
+     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp HOME  &kp PG_DN &kp PG_UP &kp END    &kp DEL
+   &sl DEF    &none      &none    &none     &none     &none           &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &kp TAB  &kp RET
+              &bt BT_CLR &none    &none     &none     &none           &none     &none     &kp DOT   &kp COMMA  &kp FSLH
+                                            &sl NUM   &sl SYM         &kp SPACE &sl NAV
             >;
 
         };
