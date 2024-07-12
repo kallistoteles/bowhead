@@ -4,6 +4,12 @@
 config ZMK_BLE
   default y
 
+config CONFIG_ZMK_SLEEP
+  default y
+
+config CONFIG_ZMK_BLE_EXPERIMENTAL_CONN
+  default y
+
 if SHIELD_BOWHEAD_LEFT
 
 config ZMK_KEYBOARD_NAME
