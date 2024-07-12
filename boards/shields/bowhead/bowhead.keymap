@@ -11,7 +11,7 @@
 / {
 
 behaviors {
-  hr: balanced_homerow_mods {
+  hr: homerow_mods {
     compatible = "zmk,behavior-hold-tap";
     tapping-term-ms = <150>;
     quick-tap-ms = <0>;
