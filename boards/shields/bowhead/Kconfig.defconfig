@@ -4,9 +4,9 @@
 config ZMK_BLE
   default y
 
-config CONFIG_ZMK_SLEEP
-  bool "Enable sleep mode"
-  default y
+# config CONFIG_ZMK_SLEEP
+#   bool "Enable sleep mode"
+#   default y
 
 if SHIELD_BOWHEAD_LEFT
 
