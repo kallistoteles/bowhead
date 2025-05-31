@@ -7,6 +7,7 @@
 #define SYM 1
 #define NUM 2
 #define NAV 3
+#define FUN 4
 
 / {
 
@@ -111,12 +112,12 @@ keymap {
         numeric_layer {
 // num
 // -------------------------------------------------------------     --------------------------------------------------------------
-//           |  cut    |         |    /    |    *    |         |     |         |    7    |    8    |    9    |         |
+//           |  cut    |         |    /    |    *    |         |     |  FUN    |    7    |    8    |    9    |         |
 // |   DEF   |  copy   |  paste  |    +    |    -    |         |     |         |    4    |    5    |    6    |         |  RETURN   |
 //           |  tcopy  |  tpaste |    %    |    =    |         |     |         |    1    |    2    |    3    |         |
 //                                         |   NUM   |   SYM   |     |  SPACE  |    0    |
             bindings = <
-              &cut      &none     &kp FSLH  &kp STAR  &none           &none     &kp N7    &kp N8    &kp N9    &none
+              &cut      &none     &kp FSLH  &kp STAR  &none           &sl FUN   &kp N7    &kp N8    &kp N9    &none
    &sl DEF    &copy     &paste    &kp PLUS  &kp MINUS &none           &none     &kp N4    &kp N5    &kp N6    &none     &kp RET
               &tcopy    &tpaste   &kp PRCNT &kp EQUAL &none           &none     &kp N1    &kp N2    &kp N3    &none
                                             &sl NUM   &sl SYM         &kp SPACE &kp N0
@@ -139,5 +140,21 @@ keymap {
             >;
 
         };
+
+        function_layer {
+// fun
+// -------------------------------------------------------------     --------------------------------------------------------------
+//           |         |         |         |         |         |     |         |   F7    |   F8    |   F9    |         |
+// |   DEF   |         |         |         |         |         |     |         |   F4    |   F5    |   F6    |         |  RETURN   |
+//           |         |         |         |         |         |     |         |   F1    |   F2    |   F3    |         |
+//                                         |   NUM   |   SYM   |     |  SPACE  |   NAV   |
+            bindings = <
+              &none     &none     &none     &none     &none           &none     &kp F7    &kp F8    &kp F9    &kp F12
+   &sl DEF    &none     &none     &none     &none     &none           &none     &kp F4    &kp F5    &kp F6    &kp F11   &kp RET
+              &none     &none     &none     &none     &none           &none     &kp F1    &kp F2    &kp F3    &kp F10
+                                            &sl NUM   &sl SYM         &kp SPACE &sl NAV
+            >;
+        };
+
     };
 };
